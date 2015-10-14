@@ -4,7 +4,8 @@
         "DROPLET_NAME": "{{env `DIGITALOCEAN_DROPLET_NAME`}}",
         "IMAGE": "{{env `DIGITALOCEAN_IMAGE`}}",
         "REGION": "{{env `DIGITALOCEAN_REGION`}}",
-        "SIZE": "{{env `DIGITALOCEAN_SIZE`}}"
+        "SIZE": "{{env `DIGITALOCEAN_SIZE`}}",
+        "VERSION": "1.0.{{env `ATLAS_BIULD_CONFIGURATION_VERSION`}}-{{env `ATLAS_BUILD_NUMBER`}}"
     },
 
     "push": {
@@ -39,7 +40,7 @@
             "api_token": "{{user `DIGITALOCEAN_TOKEN`}}",
             "droplet_name": "{{user `DROPLET_NAME`}}",
             "image": "{{user `IMAGE`}}",
-            "snapshot_name": "{{user `DROPLET_NAME`}}-{{timestamp}}",
+            "snapshot_name": "{{user `DROPLET_NAME`}}-{{user `VERSION`}}",
             "private_networking": "false",
             "region": "{{user `REGION`}}",
             "size": "{{user `SIZE`}}",
