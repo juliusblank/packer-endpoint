@@ -5,7 +5,7 @@
         "IMAGE": "{{env `DIGITALOCEAN_IMAGE`}}",
         "REGION": "{{env `DIGITALOCEAN_REGION`}}",
         "SIZE": "{{env `DIGITALOCEAN_SIZE`}}",
-        "VERSION": "1.0.{{env `ATLAS_BIULD_CONFIGURATION_VERSION`}}-{{env `ATLAS_BUILD_NUMBER`}}"
+        "VERSION": "1.0.{{env `ATLAS_BUILD_CONFIGURATION_VERSION`}}-{{env `ATLAS_BUILD_NUMBER`}}"
     },
 
     "push": {
@@ -29,7 +29,7 @@
             "artifact": "juliusblank/endpoint",
        	    "artifact_type": "digitalocean.image",
             "metadata": {
-                "version": "{{user `version`}}"
+                "version": "{{user `VERSION`}}"
              }
         }
     ],
