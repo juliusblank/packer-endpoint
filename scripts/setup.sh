@@ -41,7 +41,8 @@ apt-get -y install \
            htop \
            iotop \
            facter \
-           jq
+           jq \
+           python-pip
            
 # Create user julius
 username="julius"
